@@ -28,26 +28,11 @@ body {
     url(images/bg-pattern-bottom.svg);
   background-color: var(--dark-cyan);
   background-repeat: no-repeat, no-repeat;
-  background-size: contain, contain;
-  background-position: top -33rem left -23rem, bottom -33rem right -27rem;
-}
-
-.background__top {
-  position: absolute;
-  top: -45%;
-  left: -21%;
-  z-index: -1;
-}
-
-.background__bottom {
-  position: absolute;
-  bottom: -50%;
-  right: -21%;
-  z-index: -1;
+  background-position: bottom 50vh right 50vw, top 50vh left 50vw;
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   max-width: 100%;
   width: 35rem;
@@ -66,7 +51,7 @@ body {
 .card__profile--image {
   border-radius: 50%;
   width: 9.6rem;
-  border: 5px solid #fff;
+  border: 5px solid hsl(0, 0%, 100%);
   position: absolute;
   transform: translate(-50%, -50%);
 }
@@ -95,7 +80,7 @@ body {
   justify-content: space-between;
   padding: 2.4rem 5.4rem 0 4.7rem;
   margin-bottom: 2.4rem;
-  border-top: 1px solid #e8e9ec;
+  border-top: 1px solid hsl(225, 10%, 92%);
 }
 
 .card__stats--followers--num,
@@ -112,20 +97,4 @@ body {
   color: var(--dark-grayish-blue);
   font-size: 1rem;
   letter-spacing: 0.15rem;
-}
-
-@media only screen and (max-width: 420px) {
-  .card {
-    max-width: 32.6rem;
-  }
-
-  .background__top {
-    bottom: 70%;
-    left: 0%;
-  }
-
-  .background__bottom {
-    top: 50%;
-    left: 50%;
-  }
 }
