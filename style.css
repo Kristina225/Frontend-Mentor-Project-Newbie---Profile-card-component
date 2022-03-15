@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.8rem;
+  padding: 2.4rem;
+  background-color: var(--dark-cyan);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-color: var(--dark-cyan);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: top -33rem left -23rem, bottom -33rem right -27rem;
+}
+
+.background__top {
+  position: absolute;
+  top: -45%;
+  left: -21%;
+  z-index: -1;
+}
+
+.background__bottom {
+  position: absolute;
+  bottom: -50%;
+  right: -21%;
+  z-index: -1;
+}
+
+.card {
+  background-color: #ffffff;
+  display: flex;
+  max-width: 100%;
+  width: 35rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card__background {
+  border-radius: 1.5rem 1.5rem 0 0;
+  height: 14rem;
+}
+
+.card__profile--image {
+  border-radius: 50%;
+  width: 9.6rem;
+  border: 5px solid #fff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.card__profile--name {
+  margin: 7.2rem 0 0 0;
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.card__profile--age {
+  font-weight: 400;
+  margin-left: 0.85rem;
+  color: var(--dark-grayish-blue);
+}
+
+.card__profile--city {
+  margin-top: 0.8rem;
+  color: var(--dark-grayish-blue);
+  font-size: 1.4rem;
+}
+
+.card__stats {
+  margin-top: 2.8rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4rem 5.4rem 0 4.7rem;
+  margin-bottom: 2.4rem;
+  border-top: 1px solid #e8e9ec;
+}
+
+.card__stats--followers--num,
+.card__stats--likes--num,
+.card__stats--photos--num {
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.card__stats--followers--text,
+.card__stats--likes--text,
+.card__stats--photos--text {
+  color: var(--dark-grayish-blue);
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+}
+
+@media only screen and (max-width: 420px) {
+  .card {
+    max-width: 32.6rem;
+  }
+
+  .background__top {
+    bottom: 70%;
+    left: 0%;
+  }
+
+  .background__bottom {
+    top: 50%;
+    left: 50%;
+  }
+}
